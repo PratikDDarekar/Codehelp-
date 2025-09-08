@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-int n=5;
+int n=1111;
 int rem, count=0;
 
 while(n>0)
@@ -16,7 +16,9 @@ if(rem==1)
 }
 n=n/2;
 }
-cout<<count<<"is the count of set bit"<<endl;
+cout<<count<<" is the count of set bit"<<endl;
 
+// cout<<&n<<endl;
+// cout<<sizeof(n);
     return 0;
 }
