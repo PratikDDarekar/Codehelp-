@@ -18,7 +18,7 @@ int main()
         {
             j--;
         }
-        else if (arr[i] == 1 && arr[j] == 0)// or instead without any condition we can simply used else here
+        else if (arr[i] == 1 && arr[j] == 0) // or instead without any condition we can simply used else here
         {
             swap(arr[i], arr[j]);
             i++;

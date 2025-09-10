@@ -10,19 +10,18 @@ int main()
     int j = size - 1;
     while (i < j)
     {
-        while(arr[i] == 0 && i<j)
+        while (arr[i] == 0 && i < j)
         {
             i++;
         }
-        while (arr[j] == 1 && i<j)
+        while (arr[j] == 1 && i < j)
         {
             j--;
         }
-       
-            swap(arr[i], arr[j]);
-            i++;
-            j--;
-        
+
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
     }
 
     for (int i = 0; i < size; i++)
