@@ -1,63 +1,62 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>//don't forget to include
+#include <algorithm> //don't forget to include
 using namespace std;
 
 void rotateImage(vector<vector<int>> &matrix);
-void reverseVector(vector<int>&arr);
+void reverseVector(vector<int> &arr);
 
 int main()
 {
-    vector<vector<int>> matrix = {{1, 2,3},
-                               {4,5,6},
-                               {7,8,9},
-                               };
+    vector<vector<int>> matrix = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+    };
     rotateImage(matrix);
 }
 
 void rotateImage(vector<vector<int>> &matrix)
 {
-    //transpose
-    for(int i=0;i<matrix.size();i++)
+    // transpose
+    for (int i = 0; i < matrix.size(); i++)
     {
-        for(int j=i;j<matrix[i].size();j++)
+        for (int j = i; j < matrix[i].size(); j++)
         {
-            swap(matrix[i][j],matrix[j][i]);
+            swap(matrix[i][j], matrix[j][i]);
         }
     }
-//reverse
-   for(int i=0;i<matrix.size();i++){
-   // reverse(matrix[i].begin(),matrix[i].end());    // by using utility function
-
-    reverseVector(matrix[i]);  //by using reverse function
-   }
-
-
-//print
-    for(int i=0;i<matrix.size();i++)
+    // reverse
+    for (int i = 0; i < matrix.size(); i++)
     {
-        for(int j=0;j<matrix[i].size();j++)
+        // reverse(matrix[i].begin(),matrix[i].end());    // by using utility function
+
+        reverseVector(matrix[i]); // by using reverse function
+    }
+
+    // print
+    for (int i = 0; i < matrix.size(); i++)
+    {
+        for (int j = 0; j < matrix[i].size(); j++)
         {
-          cout<<matrix[i][j];
+            cout << matrix[i][j];
         }
-        cout<<endl;
+        cout << endl;
     }
 }
 
-void reverseVector(vector<int>&arr)
+// or ny using reverse logic
+void reverseVector(vector<int> &arr)
 {
-    int n=arr.size();
-    int start =0;
-    int end=n-1;
+    int n = arr.size();
+    int start = 0;
+    int end = n - 1;
 
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        swap(arr[start],arr[end]);
+        swap(arr[start], arr[end]);
 
         start++;
         end--;
     }
-
-
-
 }
