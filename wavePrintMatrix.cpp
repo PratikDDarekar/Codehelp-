@@ -20,17 +20,19 @@ int main(){
 
 void wavePrintMatrix(vector<vector<int>>v)
 {
-int m=v.size();
-int n=v[0].size();
-
+int m=v.size();//row total size
+int n=v[0].size();//column total size
+//printing columwise
 for(int startCol=0;startCol<n;startCol++)
 {
+    //even no. of column -> top down approach
     if((startCol & 1)==0){
     for(int j=0;j<m; j++ )
     {
         cout<<v[j][startCol]<<" ";
     }
    }
+   //oddno. of columns -> bottom up approach
    else{
     for(int j =m-1;j>=0;j--)
     {
